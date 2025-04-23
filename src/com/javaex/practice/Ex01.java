@@ -1,6 +1,17 @@
 package com.javaex.practice;
 
 public class Ex01 {
+	/*
+	 *  while문
+		index0
+		index1
+		index2
+		for문
+		order0
+		order1
+		order2
+
+	 */
 	
 	public static void main(String[] args) {
 		
