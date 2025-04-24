@@ -1,5 +1,7 @@
 package com.javaex.practice;
 
+import java.util.Scanner;
+
 public class Ex20 {
 	
 	/*
@@ -14,7 +16,38 @@ public class Ex20 {
 		*개발시 랜덤하게 생성된 값을 출력해서 테스트 하면 편리합니다
 	 */
 	public static void main(String[] args) {
-		
-	}
+		Scanner sc = new Scanner(System.in);
+		String playAgain;
 
+        System.out.println("===============================");
+        System.out.println("       [숫자맞추기게임 시작]        ");
+        System.out.println("===============================");
+
+        
+            int answer = (int)(Math.random() * 10) + 1; 
+            int guess;            
+
+            while (true) {
+                System.out.print(">> ");
+                guess = sc.nextInt();
+
+                if (guess < answer) {
+                    System.out.println("더 높게");
+                } else if (guess > answer) {
+                    System.out.println("더 낮게");
+                } else {
+                    System.out.println("맞았습니다.");
+                    break;
+                }
+            }
+           
+            System.out.print("게임을 종료하시겠습니까? (y/n): ");
+            playAgain = sc.next();
+            while (playAgain.equalsIgnoreCase("n"));
+
+        System.out.println("===============================");
+        System.out.println("       [숫자맞추기게임 종료]        ");
+        System.out.println("===============================");
+        sc.close();
+    }
 }
